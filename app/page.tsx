@@ -2,11 +2,31 @@ import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 
 const products = [
-  ["PTFE 斑马热缩管", "彩色条纹识别，适用于导管加工定位与区分"],
-  ["PTFE 精密管材", "单腔、多腔及异形结构，支持薄壁定制"],
-  ["热缩管", "稳定收缩，适合包覆、固定与工艺保护"],
-  ["可撕裂管材", "导入保护与释放更顺畅，适配装配流程"],
-  ["定制化服务", "尺寸、颜色、壁厚、孔腔结构按需开发"]
+  {
+    title: "PTFE 斑马热缩管",
+    text: "彩色条纹识别，适用于导管加工定位与区分",
+    image: "/images/zebra-heat-shrink-product.png"
+  },
+  {
+    title: "PTFE 精密管材",
+    text: "单腔、多腔及异形结构，支持薄壁定制",
+    image: "/images/ptfe-precision-tubing-v2.png"
+  },
+  {
+    title: "热缩管",
+    text: "稳定收缩，适合包覆、固定与工艺保护",
+    image: "/images/heat-shrink-tubing.png"
+  },
+  {
+    title: "可撕裂管材",
+    text: "导入保护与释放更顺畅，适配装配流程",
+    image: "/images/peel-away-tubing.png"
+  },
+  {
+    title: "定制化服务",
+    text: "尺寸、颜色、壁厚、孔腔结构按需开发",
+    image: "/images/custom-tubing-service.png"
+  }
 ];
 
 const strengths = [
@@ -38,8 +58,8 @@ export default function Home() {
       <section className="hero" id="top">
         <Image
           className="hero-image"
-          src="/images/ptfe-product-hero.jpg"
-          alt="正载科技 PTFE 管材产品"
+          src="/images/zebra-heat-shrink-hero.png"
+          alt="正载科技 PTFE 斑马热缩管产品"
           fill
           priority
           sizes="100vw"
@@ -66,16 +86,22 @@ export default function Home() {
 
       <section className="section products-section" id="products">
         <div className="product-grid">
-          {products.map(([title, text]) => (
-            <article className="product-card" key={title}>
-              <div className="product-visual" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </div>
-              <h2>{title}</h2>
-              <p>{text}</p>
-              <a href="#contact" aria-label={`咨询${title}`}>→</a>
+          {products.map((product) => (
+            <article className="product-card" key={product.title}>
+              {product.image ? (
+                <div className="product-photo">
+                  <Image src={product.image} alt={product.title} fill sizes="(max-width: 760px) 100vw, 20vw" />
+                </div>
+              ) : (
+                <div className="product-visual" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              )}
+              <h2>{product.title}</h2>
+              <p>{product.text}</p>
+              <a href="#contact" aria-label={`咨询${product.title}`}>→</a>
             </article>
           ))}
         </div>
