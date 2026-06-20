@@ -1,0 +1,5 @@
+cd "/d/文档/AI/zheng zai ke ji wang zhan"
+git status
+git add .
+git commit -m "更新网站内容"
+git push -u origin main
