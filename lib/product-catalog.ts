@@ -23,7 +23,7 @@ export const products: Product[] = [
     shortDescription: "彩色条纹识别，适用于导管加工定位与区分",
     description:
       "适用于导管轴身、导丝及其他细长医疗器械部件的包覆。斑马条纹为器械旋转与移动提供直观的视觉参照，也便于加工、装配过程中的定位与识别。",
-    image: "/images/reference-zebra-advantage.jpg",
+    image: "/images/zebra-heat-shrink-v2.png",
     features: [
       "鲜明的螺旋斑马条纹",
       "超薄壁与精密尺寸控制",

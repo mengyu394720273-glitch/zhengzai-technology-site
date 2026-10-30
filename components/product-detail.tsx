@@ -51,6 +51,7 @@ export function ProductDetail({ product }: { product: Product }) {
           <div className="story-image">
             <Image
               src={product.image}
+              style={zebra ? { objectFit: "contain" } : undefined}
               alt={`${product.title}产品展示`}
               fill
               priority
