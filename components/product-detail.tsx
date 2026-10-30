@@ -47,7 +47,7 @@ export function ProductDetail({ product }: { product: Product }) {
           <h1>{product.title}</h1>
           <p>{productEnglishNames[product.slug]}</p>
         </header>
-        <section className="product-story">
+        <section className={zebra ? "product-story product-story--portrait" : "product-story"}>
           <div className="story-image">
             <Image
               src={product.image}
