@@ -47,11 +47,10 @@ export function ProductDetail({ product }: { product: Product }) {
           <h1>{product.title}</h1>
           <p>{productEnglishNames[product.slug]}</p>
         </header>
-        <section className={zebra ? "product-story product-story--portrait" : "product-story"}>
+        <section className="product-story">
           <div className="story-image">
             <Image
               src={product.image}
-              style={zebra ? { objectFit: "contain" } : undefined}
               alt={`${product.title}产品展示`}
               fill
               priority

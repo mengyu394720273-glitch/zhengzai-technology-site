@@ -522,14 +522,6 @@ textarea:focus {
 .story-image img {
   object-fit: cover;
 }
-.product-story--portrait {
-  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
-}
-.product-story.product-story--portrait .story-image {
-  aspect-ratio: 3 / 4;
-  width: 100%;
-  max-width: 380px;
-}
 .product-story h2 {
   font-size: 25px;
   margin-bottom: 20px;
