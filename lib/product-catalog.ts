@@ -115,7 +115,7 @@ export const products: Product[] = [
     shortDescription: "稳定收缩，适合包覆、固定与工艺保护",
     description:
       "热缩管用于导管和精密组件的包覆、固定、成型及加工保护，可根据被包覆部件、工艺温度和表面要求匹配材料与收缩方案。",
-    image: "/images/heat-shrink-tubing.png",
+    image: "/images/heat-shrink-tubing-v2.png",
     features: [
       "稳定收缩与尺寸一致性",
       "表面平整、包覆均匀",
