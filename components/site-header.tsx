@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -15,7 +16,14 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="正载科技首页">
-        <span className="brand-mark">Z</span>
+        <Image
+          className="brand-mark"
+          src="/images/zhengzai-logo-mark.png"
+          alt=""
+          width={48}
+          height={48}
+          priority
+        />
         <span>
           <strong>正载科技</strong>
           <small>Zhengzai Technology</small>
